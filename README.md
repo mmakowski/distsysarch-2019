@@ -1,4 +1,4 @@
-distributed prime checker
+distributed primality checker
 
 Use:
 
@@ -10,9 +10,9 @@ x python/go/rust/haskell
 
 ## User Interface
 
-    prime check <number> -- check if a number is prime
-    prime max -- check max known contiguous prime
-    prime list -- list all known contiguous primes
+* `prime check <number>` -- check if a number is prime
+* `prime max` -- check max known contiguous prime
+* `prime list` -- list all known contiguous primes
 
 
 ## Architecture

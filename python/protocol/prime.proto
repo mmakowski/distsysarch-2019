@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service PrimeChecker {
+    rpc IsPrime(IsPrimeRequest) returns (IsPrimeResponse) {}
+}
+
+message IsPrimeRequest {
+    uint64 number = 1;
+}
+
+message IsPrimeResponse {
+    bool isPrime = 1;
+    uint64 divisor = 2; // if not prime, one of the divisors
+}

@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package protocol;
+
 service PrimeChecker {
     rpc IsPrime(IsPrimeRequest) returns (IsPrimeResponse) {}
 }

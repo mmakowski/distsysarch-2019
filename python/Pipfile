@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 grpcio = "~=1.20"
+grpcio-tools = "~=1.21"
 
 [packages]
 redis = "~=3.2"

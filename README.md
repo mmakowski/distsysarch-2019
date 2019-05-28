@@ -30,4 +30,5 @@ x python/go/rust/haskell
 
 ### Python
 
-Not organised very well, all worker and client code are lumped together in a single directory structure with a single pipenv environment. It makes it easier to share the protocol code and ensure correct libraries are present in each image.
+Not organised very well, all worker and client code are lumped together in a single directory structure with a single pipenv environment. It makes it easier to share the protocol code and ensure correct libraries are present in each image, but in a real project these application should be better separated, and perhaps have protocol published as a pip package.
+

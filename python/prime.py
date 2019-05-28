@@ -2,6 +2,9 @@ import sys
 
 from redis import Redis
 
+from protocol import prime_pb2
+
+
 PRIMES = 'primes'
 
 

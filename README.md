@@ -25,3 +25,9 @@ x python/go/rust/haskell
         * if max known contiguous prime is less than sqrt input then try division by all numbers up to sqrt of input
     * siever: runs Eratosthenes sieve algorithm, populating the cache with subsequent contiguous primes 
 
+
+## Implementations
+
+### Python
+
+Not organised very well, all worker and client code are lumped together in a single directory structure with a single pipenv environment. It makes it easier to share the protocol code and ensure correct libraries are present in each image.

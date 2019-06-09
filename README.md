@@ -8,6 +8,7 @@ Use:
 
 x python/go/rust/haskell
 
+
 ## User Interface
 
 * `prime check <number>` -- check if a number is prime
@@ -32,3 +33,8 @@ x python/go/rust/haskell
 
 Not organised very well, all worker and client code are lumped together in a single directory structure with a single pipenv environment. It makes it easier to share the protocol code and ensure correct libraries are present in each image, but in a real project these application should be better separated, and perhaps have protocol published as a pip package.
 
+
+## Good numbers to check
+
+* 982451651432521 (min divisor: 19127491)
+* 9824516514325212377 (prime close to the representation limit, takes ~10 mins to check naively)

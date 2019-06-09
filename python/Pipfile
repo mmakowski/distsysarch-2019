@@ -11,6 +11,7 @@ grpcio-tools = "~=1.21"
 [packages]
 redis = "~=3.2"
 protobuf = "~=3.7"
+grpcio = "~=1.20"
 
 [requires]
 python_version = "3.7"

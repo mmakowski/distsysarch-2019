@@ -1,5 +1,6 @@
 import sys
 
+import grpc
 from redis import Redis
 
 from protocol import prime_pb2, prime_pb2_grpc
@@ -32,7 +33,10 @@ def _list():
 
 
 def _check(num: int):
-    print("TODO")
+    channel = grpc.insecure_channel('localhost:9000')  # TODO: needs to point to where the checker runs
+    stub = prime_pb2_grpc.PrimeCheckerStub(channel)
+    response = stub.IsPrime(prime_pb2.IsPrimeRequest(number=num))
+    print(response)
 
 
 def _redis() -> Redis:

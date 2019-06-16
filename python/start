@@ -1,3 +1,15 @@
 #!/bin/sh
+# to test this locally, start a local Kubernetes cluster first, e.g. with `minikube start`
 
-docker run -d -p 6379:6379 redis:5.0.5
+# create deployments
+kubectl run redis --image=redis:5.0.5 --port=6379
+# TODO: this needs to be visible to minikube; so either push to dockerhub or use `eval $(minikube docker-env)`
+kubectl run checker --image=isharine/dsa-python-checker:0.0.1 --port=9000
+
+# explose as services
+kubectl expose deployment redis --type=NodePort
+kubectl expose deployment checker --type=NodePort
+
+# TODO: make the endpoint details available in the calling shell
+# this does not work:
+# export DSA_REDIS=`minikube service redis --url`

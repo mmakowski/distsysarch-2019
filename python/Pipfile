@@ -5,13 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
-grpcio = "~=1.20"
+grpcio = "~=1.21"
 grpcio-tools = "~=1.21"
 
 [packages]
 redis = "~=3.2"
 protobuf = "~=3.7"
-grpcio = "~=1.20"
+grpcio = "~=1.21"
 
 [requires]
 python_version = "3.7"

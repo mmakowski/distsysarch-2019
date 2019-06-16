@@ -6,7 +6,7 @@ Use:
 * gRPC
 * Redis
 
-x python/go/rust/haskell
+x python/go/rust/swift/haskell
 
 
 ## User Interface
@@ -18,7 +18,7 @@ x python/go/rust/haskell
 
 ## Architecture
 
-* command line sends the prime to an available checker (find out if K8 helps with that)
+* command line sends the prime to an available checker (find out if k8s helps with that)
 * all known contiguous primes are cached in Redis
 * there are two types of workers:
     * checker:

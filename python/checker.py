@@ -10,7 +10,7 @@ from protocol import prime_pb2, prime_pb2_grpc
 
 
 PRIMES = 'primes'
-
+PORT = 9000
 
 class PrimeCheckerServicer(prime_pb2_grpc.PrimeCheckerServicer):
     def IsPrime(self, request, context):
@@ -24,7 +24,7 @@ class PrimeCheckerServicer(prime_pb2_grpc.PrimeCheckerServicer):
 if __name__ == '__main__':
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
     prime_pb2_grpc.add_PrimeCheckerServicer_to_server(PrimeCheckerServicer(), server)
-    server.add_insecure_port('[::]:9000')
+    server.add_insecure_port(f"[::]:{PORT}")
     server.start()
     while True:
-        time.sleep(60)
+        time.sleep(1)

@@ -9,7 +9,7 @@ grpcio = "~=1.21"
 grpcio-tools = "~=1.21"
 
 [packages]
-redis = "~=3.2"
+redis = "~=4.4"
 protobuf = "~=3.7"
 grpcio = "~=1.21"
 
